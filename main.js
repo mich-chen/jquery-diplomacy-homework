@@ -6,7 +6,7 @@ function changeColor() {
   const colorChangeEls = $('.color-change');
 
   for (const el of colorChangeEls) {
-    $(el).toggleClass('hide');
+    $(el).toggleClass('red');
   }
 }
 
@@ -17,7 +17,7 @@ function validateNumber(evt) {
   const userNum = parseInt(numberInput.val(), 10);  // typecast to num
 
   const formFeedback = $('#formFeedback');
-  if (!userNum) {
+  if (userNum > 10) {
     formFeedback.text('Please enter a smaller number');
   } else {
     formFeedback.text('You are good to go!');
